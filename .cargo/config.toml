@@ -1,0 +1,23 @@
+# LLVM configuration for different platforms
+# To check your platform: rustc --print cfg | grep target_os
+# To find LLVM on your system: find /usr -name "llvm-config" 2>/dev/null | head -1
+
+# Linux (Ubuntu/Debian with LLVM 11 installed via apt)
+[target.x86_64-unknown-linux-gnu.env]
+LLVM_SYS_110_PREFIX = "/usr/lib/llvm-11"
+
+[target.aarch64-unknown-linux-gnu.env]
+LLVM_SYS_110_PREFIX = "/usr/lib/llvm-11"
+
+# macOS Apple Silicon (M1/M2) - Homebrew
+[target.aarch64-apple-darwin.env]
+LLVM_SYS_110_PREFIX = "/opt/homebrew/opt/llvm/bin/llvm-config"
+
+# macOS Intel - Homebrew
+[target.x86_64-apple-darwin.env]
+LLVM_SYS_110_PREFIX = "/usr/local/opt/llvm@11"
+
+# Cargo aliases for FFI development
+[alias]
+# Build FFI in release mode (then run ./scripts/update_ffi_bindings.sh)
+build-ffi = "build --release -p hologram-ffi"

@@ -1,0 +1,51 @@
+# Build artifacts
+/target
+**/target/
+
+# Python artifacts
+*.pyc
+*.pyo
+*.pyd
+**/build/
+**/dist/
+pip-wheel-metadata/
+wheelhouse/
+
+# Virtual environments
+.venv/
+venv/
+**/.venv/
+**/env/
+**/venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+*.profraw
+*.profdata
+
+# Documentation
+/target/doc
+.mypy_cache/
+**/*.dylib
+atlas-12288
+crates/atlas-embeddings/.git
+**/__pycache__
+**/*.egg-info
+**/node_modules
+# Kernel binaries - now built to target/kernel-libs/
+kernels/*.so
+kernels/*.dylib
+kernels/*.dll
+rustc-ice-*
+crates/hologram-ffi/interfaces/typescript/uniffi/hologram_ffi/*.kt
+crates/hologram-ffi/interfaces/python/hologram_ffi/*.so

@@ -1,0 +1,8 @@
+max_width = 120
+error_on_unformatted = false
+fn_params_layout = "Tall"
+format_strings = false
+format_code_in_doc_comments = false
+format_macro_matchers = false
+format_macro_bodies = false
+# Remove deprecated fn_args_layout option
