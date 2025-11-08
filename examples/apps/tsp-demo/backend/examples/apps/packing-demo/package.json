@@ -1,0 +1,27 @@
+{
+  "name": "@uor-foundation/playground-web",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:stress": "tsx test-stress-100-items.ts",
+    "test:max": "tsx test-max-stress.ts",
+    "test:100-3": "tsx test-100-items-3-containers.ts"
+  },
+  "dependencies": {
+    "@uor-foundation/sigmatics": "*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^5.0.4",
+    "tsx": "^4.20.6",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.11"
+  }
+}
